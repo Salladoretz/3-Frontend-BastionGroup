@@ -1,0 +1,91 @@
+.main {
+    max-width: 1110px;
+    width: 100%;
+
+    .main__top {
+        .main__topPath {
+            display: flex;
+            font-weight: 300;
+            font-size: 12px;
+            line-height: 14px;
+            letter-spacing: 0.009em;
+            color: #b3b3b3;
+
+            :last-child {
+                color: black;
+            }
+        }
+
+        .main__topLine {
+            display: flex;
+            justify-content: space-between;
+
+            .main__topLineLeft {
+                display: flex;
+                align-items: center;
+                font-weight: 500;
+                font-size: 30px;
+                line-height: 36px;
+                letter-spacing: 1px;
+
+                button {
+                    width: 26px;
+                    height: 26px;
+                    border-radius: 50%;
+                    border: none;
+                    background: white;
+                    cursor: pointer;
+                    margin: 0px 30px 0px 10px;
+
+                    img {
+                        width: 11.67px;
+                        height: 8.17px;
+                    }
+                }
+
+
+            }
+
+            .main__topLineRight {
+                display: flex;
+                align-items: center;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 14px;
+                letter-spacing: 0.009em;
+
+                :nth-child(2) {
+                    border: none;
+                }
+
+                :nth-child(3) {
+                    width: 22px;
+                    height: 22px;
+                    border-radius: 50%;
+                    background: #C93E33;
+                    border: none;
+                    margin-left: 37px;
+
+                    img {
+                        width: 10px;
+                        height: 10px;
+                    }
+                }
+
+                :nth-child(4) {
+                    border-radius: 50%;
+                    height: 18px;
+                    width: 18px;
+                    background: white;
+                    border: none;
+                }
+            }
+        }
+    }
+
+    .main__middle {
+        background: white;
+        max-width: 1110px;
+        height: 100%;
+    }
+}
