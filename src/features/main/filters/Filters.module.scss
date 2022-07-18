@@ -1,0 +1,98 @@
+.filters {
+    height: 500px;
+    width: 269px;
+
+    .filters__title {
+        display: flex;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 0.009em;
+        align-items: center;
+        padding: 20px;
+        border-top: 1px solid #e6e6e6;
+        border-bottom: 1px solid #e6e6e6;
+
+
+
+        img {
+            width: 14.88px;
+            height: 14.17px;
+            margin-right: 10px;
+        }
+    }
+
+    .filters__titles {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.009em;
+        text-align: left;
+        padding-left: 20px;
+    }
+
+    .filters__price {
+        .filters__priceInputs {
+            display: flex;
+            padding: 0px 10px 20px 20px;
+            gap: 13px;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+            letter-spacing: 0.009em;
+
+            .filters__priceInput {
+                display: flex;
+                width: 108px;
+                height: 35px;
+                border-radius: 2px;
+                border: 1px solid #e6e6e6;
+                align-items: center;
+                padding-left: 15px;
+
+                input {
+                    border: none;
+                    width: 80px;
+                    outline: 0;
+                    margin-left: 3px;
+                }
+            }
+        }
+    }
+
+    .filters__type {
+        width: 269px;
+
+        border-top: 1px solid #e6e6e6;
+        border-bottom: 1px solid #e6e6e6;
+
+        .filters__typeHeader {
+            display: flex;
+            align-items: center;
+
+            :nth-child(2) {
+                width: 10px;
+                height: 10px;
+                margin-left: 6px;
+            }
+
+            .filters__typeImg {
+                display: flex;
+                width: 40%;
+                padding-right: 20px;
+                justify-content: end;
+
+                img {
+                    width: 7px;
+                    height: 3.5px;
+                }
+            }
+        }
+
+        .filters__typeContent {
+            .filters__typeItem {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

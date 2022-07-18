@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import css from './TypesProduct.module.scss'
-import { useAppSelector, useAppDispatch } from '../../app/hooks';
-import { addType, typesProductState } from './typesProductSlice';
+import { useAppSelector, useAppDispatch } from '../../app/hooks'
+import { addType, typesProductState } from './typesProductSlice'
 
 const TypesProduct = () => {
 

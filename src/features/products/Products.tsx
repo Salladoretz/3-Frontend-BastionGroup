@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import css from './Products.module.scss'
 import { useAppSelector, useAppDispatch } from '../../app/hooks'
-import { addProduct, productsState } from './productsSlice'
+import { productsList, addProduct, productsState } from './productsSlice'
 import Product from '../../assets/img/Product.png'
 
 const TypesProduct = () => {
 
-    const products = useAppSelector(state => state.products);
+    const products = useAppSelector(productsList);
     const types = useAppSelector(state => state.typesProduct);
 
     const dispatch = useAppDispatch()

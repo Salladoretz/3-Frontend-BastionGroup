@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
+import { RootState } from '../../app/store'
 import Product from '../../assets/img/Product.png'
 
 
@@ -27,6 +28,30 @@ const initialState: Array<productsState> = [
         price: 200,
         standart: 'СНИП',
         image: Product
+    },
+    {
+        id: '03',
+        name: 'Mall 01',
+        type: 'Mall',
+        price: 200,
+        standart: 'ГОСТ',
+        image: Product
+    },
+    {
+        id: '04',
+        name: 'Mall 02',
+        type: 'Mall',
+        price: 200,
+        standart: 'ГОСТ',
+        image: Product
+    },
+    {
+        id: '05',
+        name: 'Wall 02',
+        type: 'Wall',
+        price: 200,
+        standart: 'ТОСТ',
+        image: Product
     }
 ]
 
@@ -41,5 +66,7 @@ export const productsSlice = createSlice({
 })
 
 export const { addProduct } = productsSlice.actions
+
+export const productsList = (state: RootState) => state.products
 
 export default productsSlice.reducer
