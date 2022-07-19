@@ -219,17 +219,35 @@
                 font-size: 12px;
                 line-height: 14px;
                 letter-spacing: 0.009em;
-                height: 42px;
+                margin-top: 26px;
 
-                button {
-                    border: none;
+
+                .header__cartIcon {
+                    width: 18.75px;
+                    height: 16.67px;
+                    margin-bottom: 6px;
+                }
+
+                .header__cartCounter {
+                    width: 11px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background: #C93E33;
+                    color: white;
+                    position: relative;
+                    left: 22px;
+                    bottom: 44px;
+                    font-weight: 600;
+                    font-size: 8px;
+                    line-height: 10px;
+                    text-align: center;
+                    border: 2px solid #FFFFFF;
+                    padding-top: 2px;
+                }
+
+                .header__cartCounterHide {
                     background: transparent;
-                    cursor: pointer;
-
-                    .header__cartIcon {
-                        width: 18.75px;
-                        height: 16.67px;
-                    }
+                    color: white;
                 }
             }
         }

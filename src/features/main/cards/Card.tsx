@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import css from './Card.module.scss'
 import Cart_red from '../../../assets/icons/Cart_red.png'
 import { productsState } from '../../products/productsSlice'
+import { addProduct } from '../../cart/orderSlice'
+import { useAppDispatch } from '../../../app/hooks'
 
 
 interface CardProduct {
@@ -10,7 +12,18 @@ interface CardProduct {
 
 const Card: React.FC<CardProduct> = ({ product }) => {
 
+    const dispatch = useAppDispatch()
+
     const [counter, setCounter] = useState(0)
+
+    const add = () => {
+        let newProduct = {
+            productId: product.id,
+            price: product.price,
+            quantity: counter
+        }
+        dispatch(addProduct(newProduct))
+    }
 
     return (
         <div className={css.card}>
@@ -47,7 +60,9 @@ const Card: React.FC<CardProduct> = ({ product }) => {
                     </div>
                 </div>
                 <div className={css.card__buttons}>
-                    <button className={css.card__buttonCart}>
+                    <button
+                        className={css.card__buttonCart}
+                        onClick={() => add()}>
                         <img src={Cart_red} alt="" />
                         <p>В корзину</p>
                     </button>

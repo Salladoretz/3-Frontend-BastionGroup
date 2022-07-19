@@ -6,7 +6,7 @@ import Basket from '../../assets/icons/Basket.png'
 interface CardOrder {
     productId: string,
     quantity: number
-    change: (arg1: string, arg2: number) => any
+    change: (arg1: string, arg2: number, arg3: number) => any
     remove: (item: string) => any
 }
 
@@ -18,8 +18,8 @@ const OrderCard: React.FC<CardOrder> = ({ productId, quantity, change, remove })
     const [counter, setCounter] = useState(quantity)
 
     const setQty = (qty: number) => {
-        setCounter(qty)
-        change(productId, counter)
+        change(productId, Number(product?.price), counter + qty)
+        setCounter(counter + qty)
     }
 
     const summ = Number(product?.price) * counter
@@ -34,11 +34,11 @@ const OrderCard: React.FC<CardOrder> = ({ productId, quantity, change, remove })
             </div>
             <div className={css.order__infoQty}>
                 <button
-                    onClick={() => setQty(counter + 1)}
+                    onClick={() => setQty(1)}
                 >+</button>
                 <div className={css.order__infoCounter}>{counter}</div>
                 <button
-                    onClick={() => counter > 0 ? setQty(counter - 1) : ''}
+                    onClick={() => counter > 0 ? setQty(-1) : ''}
                 >-</button>
             </div>
             <div className={css.order__total}>{summ.toLocaleString()} руб.</div>

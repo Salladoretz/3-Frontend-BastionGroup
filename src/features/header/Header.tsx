@@ -11,8 +11,12 @@ import Enter from '../../assets/icons/Enter.png'
 import Star from '../../assets/icons/Star.png'
 import Cart from '../../assets/icons/Cart.png'
 import { Link } from 'react-router-dom'
+import { useAppSelector } from '../../app/hooks'
 
 const Header = () => {
+
+    const order = useAppSelector(state => state.order)
+
     return (
         <div className={css.header}>
             <div className={css.header__top}>
@@ -64,18 +68,22 @@ const Header = () => {
                         <button>
                             <img src={Star} alt='' className={css.header__favoritesIcon} />
                         </button>
-                        <p>Избранное</p>
+                        Избранное
                     </div>
-
                     <div className={css.header__cart}>
                         <Link to='cart'>
-                            <div>
+                            <div className={css.header__cartLink}>
                                 <img src={Cart} alt='' className={css.header__cartIcon} />
+
                             </div>
                         </Link>
-                        <p>Корзина</p>
+                        Корзина
+                        <div
+                            className={order.length > 0
+                                ? css.header__cartCounter
+                                : css.header__cartCounterHide}
+                        >{order.length}</div>
                     </div>
-
                 </div>
             </div>
         </div>

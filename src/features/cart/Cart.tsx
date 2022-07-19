@@ -16,24 +16,22 @@ const Cart = () => {
 
     const dispatch = useAppDispatch()
     const order = useAppSelector(state => state.order)
-    const products = useAppSelector(state => state.products)
 
     const remove = (productId: string) => {
         dispatch(removeProduct(productId))
     }
 
-    const change = (productId: string, quantity: number) => {
+    const change = (productId: string, price: number, quantity: number) => {
         let newQty = {
             productId: productId,
+            price: price,
             quantity: quantity
         }
         dispatch(setQuantity(newQty))
     }
 
     const totalPrice = order.map(item => {
-        let qty = item.quantity
-        let product = products.find(el => el.id === item.productId)
-        return Number(product?.price) * qty
+        return item.price * item.quantity
     }).reduce((total, product) => total + product, 0).toLocaleString()
 
     return (
