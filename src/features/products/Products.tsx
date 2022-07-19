@@ -6,8 +6,8 @@ import Product from '../../assets/img/Product.png'
 
 const TypesProduct = () => {
 
-    const products = useAppSelector(productsList);
-    const types = useAppSelector(state => state.typesProduct);
+    const products = useAppSelector(productsList)
+    const types = useAppSelector(state => state.typesProduct)
 
     const dispatch = useAppDispatch()
 

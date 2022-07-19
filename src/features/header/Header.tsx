@@ -66,12 +66,16 @@ const Header = () => {
                         </button>
                         <p>Избранное</p>
                     </div>
+
                     <div className={css.header__cart}>
-                        <button>
-                            <img src={Cart} alt='' className={css.header__cartIcon} />
-                        </button>
+                        <Link to='cart'>
+                            <div>
+                                <img src={Cart} alt='' className={css.header__cartIcon} />
+                            </div>
+                        </Link>
                         <p>Корзина</p>
                     </div>
+
                 </div>
             </div>
         </div>

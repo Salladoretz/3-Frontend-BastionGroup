@@ -6,6 +6,7 @@ import Header from './features/header/Header'
 import Main from './features/main/Main'
 import TypesProduct from './features/typesProduct/TypesProduct'
 import Products from './features/products/Products'
+import Cart from './features/cart/Cart'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path='/' element={<Main />} />
         <Route path='/types' element={<TypesProduct />} />
         <Route path='/products' element={<Products />} />
+        <Route path='/cart' element={<Cart />} />
       </Routes>
       <Footer />
     </div>

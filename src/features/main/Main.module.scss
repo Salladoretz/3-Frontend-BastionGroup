@@ -29,12 +29,14 @@
                 letter-spacing: 1px;
 
                 button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                     width: 26px;
                     height: 26px;
                     border-radius: 50%;
                     border: none;
                     background: white;
-                    cursor: pointer;
                     margin: 0px 30px 0px 10px;
 
                     img {
@@ -56,9 +58,13 @@
 
                 :nth-child(2) {
                     border: none;
+                    background: transparent;
                 }
 
                 :nth-child(3) {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                     width: 22px;
                     height: 22px;
                     border-radius: 50%;
@@ -73,6 +79,9 @@
                 }
 
                 :nth-child(4) {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                     border-radius: 50%;
                     height: 18px;
                     width: 18px;
@@ -91,6 +100,7 @@
         .main__middleHeader {
             display: flex;
             min-height: 69px;
+            border-bottom: 1px solid #e6e6e6;
 
             .main__middleCategoties {
                 display: flex;
@@ -98,7 +108,7 @@
                 align-items: center;
                 gap: 11px;
                 border-right: 1px solid #e6e6e6;
-                border-bottom: 1px solid #e6e6e6;
+
 
                 :nth-child(1) {
                     width: 14.17px;
@@ -132,6 +142,7 @@
 
             .sidebar {
                 width: 269px;
+                border-right: 1px solid #e6e6e6;
 
                 .sidebar__posts {
                     text-align: left;
@@ -178,6 +189,30 @@
                     }
                 }
             }
+        }
+    }
+
+    .main__bottom {
+        height: 60px;
+    }
+
+    .main__underline {
+        text-align: left;
+        margin-bottom: 107px;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 18px;
+        letter-spacing: 0.009em;
+
+        :nth-child(1) {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 22px;
+            letter-spacing: 0.009em;
+        }
+
+        :nth-last-child(1) {
+            color: #C93E33;
         }
     }
 }

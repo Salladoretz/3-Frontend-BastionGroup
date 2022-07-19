@@ -61,7 +61,7 @@
             }
 
 
-            input {
+            .footer__aboveInput {
                 padding-left: 10px;
                 height: 42px;
                 border-radius: 4px;
@@ -73,7 +73,7 @@
             .footer__aboveButton {
                 width: 280px;
 
-                button {
+                .footer__callbackButton {
                     background: #C93E33;
                     color: white;
                     border: none;

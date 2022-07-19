@@ -9,7 +9,7 @@ export type productsState = {
     type: string,
     price: number,
     standart: string,
-    image: object
+    image: any
 }
 
 const initialState: Array<productsState> = [
@@ -33,7 +33,7 @@ const initialState: Array<productsState> = [
         id: '03',
         name: 'Mall 01',
         type: 'Mall',
-        price: 200,
+        price: 2000,
         standart: 'ГОСТ',
         image: Product
     },
@@ -41,7 +41,7 @@ const initialState: Array<productsState> = [
         id: '04',
         name: 'Mall 02',
         type: 'Mall',
-        price: 200,
+        price: 580,
         standart: 'ГОСТ',
         image: Product
     },
@@ -49,7 +49,7 @@ const initialState: Array<productsState> = [
         id: '05',
         name: 'Wall 02',
         type: 'Wall',
-        price: 200,
+        price: 5000,
         standart: 'ТОСТ',
         image: Product
     }
@@ -68,5 +68,6 @@ export const productsSlice = createSlice({
 export const { addProduct } = productsSlice.actions
 
 export const productsList = (state: RootState) => state.products
+
 
 export default productsSlice.reducer

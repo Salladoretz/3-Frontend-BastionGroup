@@ -3,16 +3,16 @@ import { createSlice } from '@reduxjs/toolkit'
 
 export type filterstState = {
     filterType: string,
-    minPrice: number,
-    maxPrice: number,
+    filterMinPrice: number,
+    filterMaxPrice: number,
     filterStandart: string[]
 }
 
 const initialState: filterstState =
 {
     filterType: '',
-    minPrice: 0,
-    maxPrice: 0,
+    filterMinPrice: 0,
+    filterMaxPrice: 0,
     filterStandart: ['']
 }
 

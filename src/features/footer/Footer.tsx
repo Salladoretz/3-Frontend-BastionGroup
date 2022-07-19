@@ -24,10 +24,10 @@ const Footer = () => {
             </div>
             <div className={css.footer__above}>
                 <div className={css.footer__aboveContainer}>
-                    <input type="text" placeholder='Ваше имя' />
-                    <input type="text" placeholder='Ваш телефон' />
+                    <input className={css.footer__aboveInput} type="text" placeholder='Ваше имя' />
+                    <input className={css.footer__aboveInput} type="text" placeholder='Ваш телефон' />
                     <div className={css.footer__aboveButton}>
-                        <button>Заказать звонок</button>
+                        <button className={css.footer__callbackButton}>Заказать звонок</button>
                         <p>Нажимая на кнопку вы соглашаетесь с политикой конфиденциальности</p>
                     </div>
                 </div>
