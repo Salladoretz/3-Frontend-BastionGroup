@@ -1,14 +1,16 @@
-import React, { useState } from 'react'
+import React from 'react'
 import css from './Main.module.scss'
-import Arrow from '../../assets/icons/Arrow.png'
-import Select from '../../assets/icons/Select.png'
-import Apps from '../../assets/icons/Apps.png'
-import List from '../../assets/icons/List.png'
-import Apps_red from '../../assets/icons/Apps_red.png'
-import Shevron_up from '../../assets/icons/Shevron_up.png'
+import ArrowLeft_red from '../../assets/icons/ArrowLeft_red.svg'
+import List from '../../assets/icons/List.svg'
+import Apps from '../../assets/icons/Apps.svg'
+import List_red from '../../assets/icons/List_red.svg'
+import Apps_red from '../../assets/icons/Apps_red.svg'
+import ShevronUp from '../../assets/icons/ShevronUp.svg'
+import ArrowLeft from '../../assets/icons/ArrowLeft.svg'
+import ArrowRight from '../../assets/icons/ArrowRight.svg'
 import StandartsList from './standartsList/StandartsList'
 import Filters from './filters/Filters'
-import Shevron_down from '../../assets/icons/Shevron_down.png'
+import ShevronDown from '../../assets/icons/ShevronDown.svg'
 import Cards from './cards/Cards'
 
 const Main = () => {
@@ -24,20 +26,20 @@ const Main = () => {
                 <div className={css.main__topLine}>
                     <div className={css.main__topLineLeft}>
                         <button>
-                            <img src={Arrow} alt="" />
+                            <img src={ArrowLeft_red} alt="" />
                         </button>
                         <p>Опоры трубопроводов</p>
                     </div>
                     <div className={css.main__topLineRight}>
                         <p>Сначала популярные</p>
                         <button>
-                            <img src={Select} alt="" />
+                            <img src={List} alt="" />
                         </button>
                         <button>
                             <img src={Apps} alt="" />
                         </button>
                         <button>
-                            <img src={List} alt="" />
+                            <img src={List_red} alt="" />
                         </button>
                     </div>
                 </div>
@@ -48,7 +50,7 @@ const Main = () => {
                         <img src={Apps_red} alt="" />
                         <p>Категории</p>
                         <div className={css.main__middleImg}>
-                            <img src={Shevron_up} alt="" />
+                            <img src={ShevronUp} alt="" />
                         </div>
                     </div>
                     <div>
@@ -84,7 +86,7 @@ const Main = () => {
                             </div>
                             <div className={css.sidebar__postsBottom}>
                                 <p>Показать все</p>
-                                <img src={Shevron_down} alt="" />
+                                <img src={ShevronDown} alt="" />
                             </div>
                         </div>
                         <div>
@@ -96,7 +98,34 @@ const Main = () => {
                     </div>
                 </div>
             </div>
-            <div className={css.main__bottom}></div>
+            <div className={css.pagination}>
+                <div className={css.pagination__wrapper}>
+                    <div className={css.pagination__range}>
+                        <p>Выводить по</p>
+                        <button>9</button>
+                        <button>15</button>
+                        <button>21</button>
+                    </div>
+                    <div className={css.pagination__buttonsWrapper}>
+                        <div className={css.pagination__buttons}>
+                            <button>
+                                <img src={ArrowLeft} alt='' />
+                            </button>
+                            <button>1</button>
+                            <button>2</button>
+                            <button>3</button>
+                            <button>4</button>
+                            <button>5</button>
+                            <button>
+                                <img src={ArrowRight} alt='' />
+                            </button>
+                        </div>
+                        <div className={css.pagination__text}>
+                            <p>Показать все товары</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div className={css.main__underline}>
                 <p>Опоры трубопроводов от Бастион Груп - производитель металлических изделий №1</p>
                 <p>Надежность работы трубопровода в значительной мере зависит от правильности и прочности его крепления. Основные средства крепления трубопроводов — это опора, подвеска, кронштейны, скобы и другие части опорных конструкций.

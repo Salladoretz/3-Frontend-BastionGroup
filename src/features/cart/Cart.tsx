@@ -2,15 +2,15 @@ import React, { useState } from 'react'
 import css from './Cart.module.scss'
 import { useAppSelector, useAppDispatch } from '../../app/hooks'
 import OrderCard from './OrderCard'
-import Warning from '../../assets/icons/Warning.png'
-import Basket from '../../assets/icons/Basket.png'
-import Person from '../../assets/icons/Person.png'
-import Phone_micro_red from '../../assets/icons/Phone_micro_red.png'
-import Email_2 from '../../assets/icons/Email_2.png'
-import Briefcase from '../../assets/icons/Briefcase.png'
-import Cart_white from '../../assets/icons/Cart_white.png'
-import List_red from '../../assets/icons/List_red.png'
-import Download from '../../assets/icons/Download.png'
+import Warning from '../../assets/icons/Warning.svg'
+import Basket from '../../assets/icons/Basket.svg'
+import Person from '../../assets/icons/Person.svg'
+import Phone from '../../assets/icons/Phone.svg'
+import At from '../../assets/icons/At.svg'
+import Briefcase from '../../assets/icons/Briefcase.svg'
+import CartSVG from '../../assets/icons/Cart.svg'
+import Text from '../../assets/icons/Text.svg'
+import Download from '../../assets/icons/Download.svg'
 import { setQuantity, removeProduct, removeAllProduct } from './orderSlice'
 
 const Cart = () => {
@@ -85,13 +85,15 @@ const Cart = () => {
                                 remove={remove}
                             />)}
                     </div>
-                    <div className={css.cart__bottom}>
-                        <button
-                            onClick={() => dispatch(removeAllProduct())}>
-                            <img className={css.order__basket} src={Basket} alt=''></img>
-                        </button>
-                        <div>Очистить корзину</div>
-                    </div>
+                    {order.length > 0
+                        ? <div className={css.cart__bottom}>
+                            <button
+                                onClick={() => dispatch(removeAllProduct())}>
+                                <img className={css.order__basket} src={Basket} alt=''></img>
+                                <div>Очистить корзину</div>
+                            </button>
+                        </div>
+                        : ''}
                 </div>
                 <div className={css.cart__mainRight}>
                     <div className={css.cart__title}>Заказ</div>
@@ -108,7 +110,7 @@ const Cart = () => {
                             />
                         </div>
                         <div className={css.customer__inputs}>
-                            <img src={Phone_micro_red} alt="" />
+                            <img src={Phone} alt="" />
                             <input
                                 type="text"
                                 placeholder='Контактный телефон'
@@ -118,7 +120,7 @@ const Cart = () => {
                             />
                         </div>
                         <div className={css.customer__inputs}>
-                            <img src={Email_2} alt="" />
+                            <img src={At} alt="" />
                             <input
                                 type="text"
                                 placeholder='Email'
@@ -146,12 +148,12 @@ const Cart = () => {
                                 className={css.cart__makeOrder}
                                 onClick={() => send()}
                             >
-                                <img src={Cart_white} alt="" />
+                                <img src={CartSVG} alt="" />
                                 Оформить заказ
                             </button>
                             <button className={css.cart__takeOffer}>
                                 <div>
-                                    <img src={List_red} alt="" />
+                                    <img src={Text} alt="" />
                                 </div>
                                 <div>
                                     <img src={Download} alt="" />

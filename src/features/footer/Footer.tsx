@@ -1,24 +1,47 @@
 import React from 'react'
 import css from './Footer.module.scss'
-import PhoneM from '../../assets/icons/Phone_micro.png'
-import TelegrammM from '../../assets/icons/Telegramm_micro.png'
-import VKM from '../../assets/icons/VK_micro.png'
+import Logo_black from '../../assets/img/Logo_black.png'
+import Copyright from '../../assets/icons/Copyright.png'
+import Phone_white from '../../assets/icons/Phone_white.svg'
+import Telegramm from '../../assets/icons/Telegramm.svg'
+import VK from '../../assets/icons/VK.svg'
 
 const Footer = () => {
     return (
         <div className={css.footer}>
             <div className={css.footer__main}>
-                <div className={css.footer__mainContainer}>
+                <div className={css.footer__mainTop}>
+                    <img src={Logo_black} alt='' />
+                    <div>
+                        <p>Металлоконструкции</p>
+                        <p>Порошковая покраска</p>
+                    </div>
+                    <div>
+                        <p>Фасадные конструкции</p>
+                        <p>Светопрозрачные конструкции</p>
+                    </div>
+                    <div className={css.footer__contacts}>
+                        <p>+7(499)380-78-90</p>
+                        <p>info@bastion.pro</p>
+                    </div>
+                </div>
+                <div className={css.footer__mainMiddle}>
+                    <div className={css.footer__copyright}>
+                        <img src={Copyright} alt='' />
+                        <p>2020 Все права защищены | Политика конфиденциальности</p>
+                    </div>
                     <div className={css.footer__smm}>
                         <button className={css.footer__smmButton}>
-                            <img src={PhoneM} alt="" />
+                            <img src={Phone_white} alt="" />
                         </button>
                         <button className={css.footer__smmButton}>
-                            <img src={TelegrammM} alt="" />
+                            <img src={Telegramm} alt="" />
                         </button>
                         <button className={css.footer__smmButton}>
-                            <img src={VKM} alt="" />
+                            <img src={VK} alt="" />
                         </button>
+                        <button className={css.footer__smmButtonBanned}></button>
+                        <button className={css.footer__smmButtonBanned}></button>
                     </div>
                 </div>
             </div>

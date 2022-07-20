@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useAppSelector } from '../../app/hooks'
 import css from './OrderCard.module.scss'
-import Basket from '../../assets/icons/Basket.png'
+import Basket from '../../assets/icons/Basket.svg'
 
 interface CardOrder {
     productId: string,

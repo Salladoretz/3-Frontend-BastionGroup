@@ -15,42 +15,74 @@ export type productsState = {
 const initialState: Array<productsState> = [
     {
         id: '01',
-        name: 'Wall 01',
-        type: 'Wall',
-        price: 100,
-        standart: 'ГОСТ',
+        name: 'Опора таровая хомутовая ТХ',
+        type: 'Опоры трубопроводов',
+        price: 849.9,
+        standart: 'ГОСТ 14911-82',
         image: Product
     },
     {
         id: '02',
-        name: 'Ball 01',
-        type: 'Ball',
-        price: 200,
-        standart: 'СНИП',
+        name: 'Опора корпусная приварная КП',
+        type: 'Опоры трубопроводов',
+        price: 849.9,
+        standart: 'ГОСТ 14911-82',
         image: Product
     },
     {
         id: '03',
-        name: 'Mall 01',
-        type: 'Mall',
-        price: 2000,
-        standart: 'ГОСТ',
+        name: 'Опора подвижная ОПБ1',
+        type: 'Опоры трубопроводов',
+        price: 849.9,
+        standart: 'ГОСТ 14911-82',
         image: Product
     },
     {
         id: '04',
-        name: 'Mall 02',
-        type: 'Mall',
+        name: 'Не адна буква А',
+        type: 'Опоры из палок',
         price: 580,
-        standart: 'ГОСТ',
+        standart: 'ГОСТ 14911-82',
         image: Product
     },
     {
         id: '05',
-        name: 'Wall 02',
-        type: 'Wall',
+        name: 'Только букво О',
+        type: 'Опоры из палок',
+        price: 5000,
+        standart: 'ГОСТ',
+        image: Product
+    },
+    {
+        id: '06',
+        name: 'Не хит',
+        type: 'Опоры из палок',
+        price: 2000,
+        standart: 'ПРОСТ',
+        image: Product
+    },
+    {
+        id: '07',
+        name: 'Товар 7',
+        type: 'Скотч',
+        price: 580,
+        standart: 'КАК',
+        image: Product
+    },
+    {
+        id: '08',
+        name: 'Товар 8',
+        type: 'Скотч',
         price: 5000,
         standart: 'ТОСТ',
+        image: Product
+    },
+    {
+        id: '09',
+        name: 'Товар 9',
+        type: 'Скотч',
+        price: 2000,
+        standart: 'ГОСТ',
         image: Product
     }
 ]

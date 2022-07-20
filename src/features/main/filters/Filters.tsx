@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import css from './Filters.module.scss'
-import Options from '../../../assets/icons/Options.png'
-import Help from '../../../assets/icons/Help.png'
-import Shevron_down from '../../../assets/icons/Shevron_down.png'
+import Options from '../../../assets/icons/Options.svg'
+import Help from '../../../assets/icons/Help.svg'
+import ShevronDown from '../../../assets/icons/ShevronDown.svg'
 import { useAppDispatch, useAppSelector } from '../../../app/hooks'
 import { setFilterMinPrice, setFilterMaxPrice, setFilterType } from './filtersSlice'
 
@@ -104,7 +104,7 @@ const Filters = () => {
                     <p className={css.filters__titles}>Тип продукта</p>
                     <img src={Help} alt="" />
                     <div className={css.filters__typeImg}>
-                        <img src={Shevron_down} alt="" />
+                        <img src={ShevronDown} alt="" />
                     </div>
                 </div>
                 <div className={css.filters__typeContent}>

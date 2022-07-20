@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import css from './Card.module.scss'
-import Cart_red from '../../../assets/icons/Cart_red.png'
+import CartSVG from '../../../assets/icons/Cart.svg'
 import { productsState } from '../../products/productsSlice'
 import { addProduct } from '../../cart/orderSlice'
 import { useAppDispatch } from '../../../app/hooks'
@@ -17,12 +17,14 @@ const Card: React.FC<CardProduct> = ({ product }) => {
     const [counter, setCounter] = useState(0)
 
     const add = () => {
-        let newProduct = {
-            productId: product.id,
-            price: product.price,
-            quantity: counter
+        if (counter > 0) {
+            let newProduct = {
+                productId: product.id,
+                price: product.price,
+                quantity: counter
+            }
+            dispatch(addProduct(newProduct))
         }
-        dispatch(addProduct(newProduct))
     }
 
     return (
@@ -63,7 +65,7 @@ const Card: React.FC<CardProduct> = ({ product }) => {
                     <button
                         className={css.card__buttonCart}
                         onClick={() => add()}>
-                        <img src={Cart_red} alt="" />
+                        <img src={CartSVG} alt="" />
                         <p>В корзину</p>
                     </button>
                     <button className={css.card__buttonDetails}>Подробнее</button>

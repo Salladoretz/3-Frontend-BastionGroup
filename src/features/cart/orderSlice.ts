@@ -7,18 +7,7 @@ export type orderState = {
     quantity: number
 }
 
-const initialState: Array<orderState> = [
-    {
-        productId: '01',
-        price: 100,
-        quantity: 2
-    },
-    {
-        productId: '02',
-        price: 200,
-        quantity: 2
-    }
-]
+const initialState: Array<orderState> = []
 
 
 export const orderSlice = createSlice({

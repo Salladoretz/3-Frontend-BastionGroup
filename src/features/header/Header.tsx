@@ -1,15 +1,15 @@
 import React from 'react'
 import css from './Header.module.scss'
-import Phone from '../../assets/icons/Phone.png'
-import Point from '../../assets/icons/Point.png'
-import Stroke from '../../assets/icons/Stroke.png'
-import Email from '../../assets/icons/Email.png'
+import Phone from '../../assets/icons/Phone.svg'
+import Point from '../../assets/icons/Point.svg'
+import ShevronDown_red from '../../assets/icons/ShevronDown_red.svg'
+import Email from '../../assets/icons/Email.svg'
 import Logo from '../../assets/img/Logo.png'
-import Apps from '../../assets/icons/Apps.png'
-import Search from '../../assets/icons/Search.png'
-import Enter from '../../assets/icons/Enter.png'
-import Star from '../../assets/icons/Star.png'
-import Cart from '../../assets/icons/Cart.png'
+import Apps from '../../assets/icons/Apps.svg'
+import Search from '../../assets/icons/Search.svg'
+import Enter from '../../assets/icons/Enter.svg'
+import Star from '../../assets/icons/Star.svg'
+import CartSVG from '../../assets/icons/Cart.svg'
 import { Link } from 'react-router-dom'
 import { useAppSelector } from '../../app/hooks'
 
@@ -39,7 +39,7 @@ const Header = () => {
                     <div className={css.header__contactsPlace}>
                         <img src={Point} alt='' />
                         <p>Москва</p>
-                        <img src={Stroke} alt='' />
+                        <img src={ShevronDown_red} alt='' />
                     </div>
                     <div className={css.header__contactsMail}>
                         <img src={Email} alt='' />
@@ -73,8 +73,7 @@ const Header = () => {
                     <div className={css.header__cart}>
                         <Link to='cart'>
                             <div className={css.header__cartLink}>
-                                <img src={Cart} alt='' className={css.header__cartIcon} />
-
+                                <img src={CartSVG} alt='' className={css.header__cartIcon} />
                             </div>
                         </Link>
                         Корзина
