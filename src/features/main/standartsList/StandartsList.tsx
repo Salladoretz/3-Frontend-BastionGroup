@@ -1,27 +1,21 @@
 import React from 'react'
-import { useAppSelector } from '../../../app/hooks'
+import { useAppSelector, useAppDispatch } from '../../../app/hooks'
 import Standart from './Standart'
 import css from './StandartsList.module.scss'
+import { setFilterStandart } from '../filters/filtersSlice'
 
 const StandartsList = () => {
 
+    const dispatch = useAppDispatch()
+
     const products = useAppSelector(state => state.products)
+    const filterStandart = useAppSelector(state => state.filters.filterStandart)
     const standarts = Array.from(new Set(products.map(item => item.standart)))
 
-    let chosen: string[] = []
 
     const addFilterStandart = (item: string) => {
-        if (chosen.includes(item)) {
-            //let arr = chosen.filter(el => { return el !== item })
-            let del = chosen.findIndex(el => el === item)
-            chosen.splice(del, 1)
-        } else {
-            chosen.push(item)
-        }
-        console.log('chosen', chosen)
+        dispatch(setFilterStandart(item))
     }
-
-
 
     return (
         <div className={css.standarts}>
@@ -30,7 +24,7 @@ const StandartsList = () => {
                     key={item}
                     name={item}
                     addFilterStandart={addFilterStandart}
-                    chosen={chosen}
+                    filterStandart={filterStandart}
                 />)}
 
         </div >

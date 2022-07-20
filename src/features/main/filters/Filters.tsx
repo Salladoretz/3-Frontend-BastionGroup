@@ -4,7 +4,7 @@ import Options from '../../../assets/icons/Options.png'
 import Help from '../../../assets/icons/Help.png'
 import Shevron_down from '../../../assets/icons/Shevron_down.png'
 import { useAppDispatch, useAppSelector } from '../../../app/hooks'
-import { setFilterType } from './filtersSlice'
+import { setFilterMinPrice, setFilterMaxPrice, setFilterType } from './filtersSlice'
 
 
 const Filters = () => {
@@ -18,27 +18,36 @@ const Filters = () => {
     const maxPrice = Number(prices.sort((a, b) => a - b).pop())
 
     const [minRange, setMinRange] = useState(minPrice)
-    const [maxRange, setMaxRange] = useState<number>(maxPrice)
+    const [maxRange, setMaxRange] = useState(maxPrice)
 
     const addMinRange = (price: number) => {
         let gap = 100
         if (maxRange - price <= gap) {
+            dispatch(setFilterMinPrice(maxRange - gap))
             setMinRange(maxRange - gap)
-        } else { setMinRange(price) }
+        } else {
+            dispatch(setFilterMinPrice(price))
+            setMinRange(price)
+        }
     }
 
     const addMaxRange = (price: number) => {
         let gap = 100
         if (price - minRange <= gap) {
+            dispatch(setFilterMaxPrice(minRange + gap))
             setMaxRange(minRange + gap)
-        } else { setMaxRange(price) }
+        } else {
+            dispatch(setFilterMaxPrice(price))
+            setMaxRange(price)
+        }
     }
 
     let fill = `linear-gradient(to right,
         #ffffff ${minRange / maxPrice * 100}%,
         #c93e33 ${minRange / maxPrice * 100}%,
         #c93e33 ${maxRange / maxPrice * 100}%,
-        #ffffff ${maxRange / maxPrice * 100}%)`
+        #ffffff ${maxRange / maxPrice * 100}%)`;
+
 
     return (
         <div className={css.filters}>
@@ -99,19 +108,20 @@ const Filters = () => {
                     </div>
                 </div>
                 <div className={css.filters__typeContent}>
+                    <button
+                        className={css.filters__typeItem}
+                        onClick={() => dispatch(setFilterType(''))}
+                    >Все продукты</button>
                     {typesProduct.map(item =>
                         <button
                             key={item.id}
-                            className={css.filters__typeItem}
-                            onClick={() => dispatch(setFilterType(item.id))}
+                            className={
+                                item.name === filters.filterType
+                                    ? css.filters__typeItem + ' ' + css.selected
+                                    : css.filters__typeItem}
+                            onClick={() => dispatch(setFilterType(item.name))}
                         >{item.name}</button>)}
                 </div>
-                <div>{filters.filterType}</div>
-                {minRange}
-                <br></br>
-                {maxRange}
-                <br></br>
-                {maxPrice}
             </div>
         </div >
     )

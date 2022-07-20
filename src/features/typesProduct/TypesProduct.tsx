@@ -59,9 +59,6 @@ const TypesProduct = () => {
             <button
                 onClick={() => check()}
             >Добавить</button>
-            {typesProduct.map(item =>
-                <div>{item.id}{item.name}</div>
-            )}
         </div>
     )
 }

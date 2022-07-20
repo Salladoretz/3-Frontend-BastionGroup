@@ -1,32 +1,20 @@
-import React, { useState } from 'react'
+import React from 'react'
 import css from './Standart.module.scss'
 
 interface ButtonStandart {
     name: string,
-    chosen: string[]
+    filterStandart: string[]
     addFilterStandart: (item: string) => void
 }
 
-const Standart: React.FC<ButtonStandart> = ({ name, chosen, addFilterStandart }) => {
-
-    const [selected, setSelected] = useState(false)
-
-    const drop = () => {
-        addFilterStandart(name)
-        if (chosen.includes(name)) {
-            setSelected(true)
-        } else {
-            setSelected(false)
-        }
-
-    }
+const Standart: React.FC<ButtonStandart> = ({ name, filterStandart, addFilterStandart }) => {
 
     return (
         <button
-            className={selected
+            className={filterStandart.includes(name)
                 ? css.standart__button_active
                 : ''}
-            onClick={() => drop()}
+            onClick={() => addFilterStandart(name)}
         >{name}</button>
     )
 }

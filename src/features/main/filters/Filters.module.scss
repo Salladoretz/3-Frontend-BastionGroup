@@ -159,13 +159,13 @@
 
     .filters__type {
         width: 269px;
-
         border-top: 1px solid #e6e6e6;
         border-bottom: 1px solid #e6e6e6;
 
         .filters__typeHeader {
             display: flex;
             align-items: center;
+            border-bottom: 1px solid #e6e6e6;
 
             :nth-child(2) {
                 width: 10px;
@@ -187,8 +187,20 @@
         }
 
         .filters__typeContent {
+            display: flex;
+            flex-direction: column;
+
             .filters__typeItem {
-                margin-bottom: 10px;
+                height: 40px;
+                border-bottom: 1px solid #e6e6e6;
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 18px;
+            }
+
+            .selected {
+                background: #C93E33;
+                color: white;
             }
         }
     }

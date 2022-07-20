@@ -69,5 +69,4 @@ export const { addProduct } = productsSlice.actions
 
 export const productsList = (state: RootState) => state.products
 
-
 export default productsSlice.reducer

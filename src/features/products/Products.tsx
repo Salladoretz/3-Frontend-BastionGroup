@@ -85,15 +85,12 @@ const TypesProduct = () => {
                 />
             </div>
             <div className={css.products__errors}>
-                {errorEmpty ? <p className={css.products__error}>Не все поля заполненны</p> : ''}
+                {errorEmpty ? <p className={css.products__error}>Не все поля заполнены</p> : ''}
                 {errorDoubleId ? <p className={css.products__error}>Такой Id уже существует</p> : ''}
             </div>
             <button
                 onClick={() => check()}
             >Добавить товар</button>
-            {products.map(item =>
-                <div>{item.id}{item.name}{item.price}</div>
-            )}
         </div>
     )
 }
