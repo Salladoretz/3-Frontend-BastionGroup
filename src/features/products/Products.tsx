@@ -22,14 +22,22 @@ const TypesProduct = () => {
 
     const check = () => {
         let checkId: boolean = products.map(item => item.id).includes(id)
-        checkId ? setErrorDoubleId(true) :
-            id === '' || product === '' || typeProduct === '' || price === '' || standart === ''
+        checkId
+            ? setErrorDoubleId(true)
+            : id === '' || product === '' || typeProduct === '' || price === '' || standart === ''
                 ? setErrorEmpty(true)
                 : add()
     }
 
     const add = () => {
-        let newProduct: productsState = { id: id, name: product, type: typeProduct, price: +price, standart: standart, image: Product }
+        let newProduct: productsState = {
+            id: id,
+            name: product,
+            type: typeProduct,
+            price: +price,
+            standart: standart,
+            image: Product
+        }
         dispatch(addProduct(newProduct))
         setId('')
         setProduct('')
@@ -60,8 +68,10 @@ const TypesProduct = () => {
                     onFocus={() => { setErrorEmpty(false) }}
                     value={product}
                 />
-                <select onChange={event => setTypeProduct(event.target.value)}>
-                    <option disabled selected>- - -</option>
+                <select
+                    onChange={event => setTypeProduct(event.target.value)}
+                >
+                    <option>- - -</option>
                     {
                         types.map(item => (
                             <option key={item.id} value={item.name}>

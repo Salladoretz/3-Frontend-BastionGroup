@@ -23,8 +23,8 @@ export const orderSlice = createSlice({
             state[index] = action.payload
         },
         removeProduct: (state, action) => {
-            let del = state.findIndex(el => el.productId === action.payload)
-            state.splice(del, 1)
+            let index = state.findIndex(el => el.productId === action.payload)
+            state.splice(index, 1)
         },
         removeAllProduct: (state) => {
             state.splice(0, state.length)

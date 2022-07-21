@@ -3,7 +3,7 @@ import { useAppSelector } from '../../app/hooks'
 import css from './OrderCard.module.scss'
 import Basket from '../../assets/icons/Basket.svg'
 
-interface CardOrder {
+type CardOrder = {
     productId: string,
     quantity: number
     change: (arg1: string, arg2: number, arg3: number) => any
@@ -32,21 +32,30 @@ const OrderCard: React.FC<CardOrder> = ({ productId, quantity, change, remove })
                 <div className={css.order__infoOrder}>{product?.name}</div>
                 <div className={css.order__infoPrice}>{product?.price.toLocaleString()} руб.</div>
             </div>
-            <div className={css.order__infoQty}>
+            <div className={css.order__quantity}>
+                <div className={css.order__qty}>
+                    <button
+                        onClick={() => setQty(1)}
+                    >+</button>
+                    <div className={css.order__infoCounter}>
+                        <input
+                            type="number"
+                            value={counter}
+                            onChange={event => setQty(+event.target.value)}
+                        />
+                    </div>
+
+                    <button
+                        onClick={() => counter > 0 ? setQty(-1) : ''}
+                    >-</button>
+                </div>
+                <div className={css.order__total}>{summ.toLocaleString()} руб.</div>
                 <button
-                    onClick={() => setQty(1)}
-                >+</button>
-                <div className={css.order__infoCounter}>{counter}</div>
-                <button
-                    onClick={() => counter > 0 ? setQty(-1) : ''}
-                >-</button>
+                    onClick={() => remove(productId)}
+                >
+                    <img className={css.order__basket} src={Basket} alt=''></img>
+                </button>
             </div>
-            <div className={css.order__total}>{summ.toLocaleString()} руб.</div>
-            <button
-                onClick={() => remove(productId)}
-            >
-                <img className={css.order__basket} src={Basket} alt=''></img>
-            </button>
 
         </div>
     )

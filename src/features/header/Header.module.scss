@@ -26,6 +26,7 @@
             letter-spacing: 0.009em;
             flex-wrap: wrap;
             text-decoration: none;
+            padding: 0px 10px;
 
             a {
                 text-decoration: none;
@@ -36,6 +37,7 @@
         .header__contacts {
             display: flex;
             flex-wrap: wrap;
+            padding: 0px 10px;
 
             .header__contactsPhone {
                 display: flex;
@@ -101,10 +103,9 @@
     .header__bottom {
         display: flex;
         min-height: 110px;
-        width: 100%;
+        width: 99vw;
         background: white;
         justify-content: center;
-        padding: 0px 10px 0px 10px;
 
         .header__bottomContainer {
             display: flex;

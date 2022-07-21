@@ -11,12 +11,16 @@
         display: flex;
         background: white;
 
+        @media screen and (max-width: 900px) {
+            flex-direction: column;
+            align-items: center;
+        }
+
         .cart__mainLeft {
             width: 100%;
 
             .cart__errors {
                 height: 59px;
-
                 border-bottom: 1px solid #e6e6e6;
 
                 .cart__error {
@@ -60,6 +64,10 @@
         .cart__mainRight {
             width: 280px;
             border-left: 1px solid #e6e6e6;
+
+            @media screen and (max-width: 900px) {
+                border-left: none;
+            }
 
             .cart__title {
                 display: flex;

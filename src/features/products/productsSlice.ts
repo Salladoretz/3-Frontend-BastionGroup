@@ -39,7 +39,7 @@ const initialState: Array<productsState> = [
     },
     {
         id: '04',
-        name: 'Не адна буква А',
+        name: 'Ни адна буква А',
         type: 'Опоры из палок',
         price: 580,
         standart: 'ГОСТ 14911-82',

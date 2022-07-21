@@ -1,7 +1,7 @@
 import React from 'react'
 import css from './Standart.module.scss'
 
-interface ButtonStandart {
+type ButtonStandart = {
     name: string,
     filterStandart: string[]
     addFilterStandart: (item: string) => void

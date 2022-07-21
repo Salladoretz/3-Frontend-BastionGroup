@@ -16,13 +16,20 @@ const TypesProduct = () => {
 
     const check = () => {
         let checkId: boolean = typesProduct.map(item => item.id).includes(id)
-        checkId ? setErrorDoubleId(true) :
-            id === '' ? setErrorId(true) :
-                typeProduct === '' ? setErrorType(true) : add()
+        checkId
+            ? setErrorDoubleId(true)
+            : id === ''
+                ? setErrorId(true)
+                : typeProduct === ''
+                    ? setErrorType(true)
+                    : add()
     }
 
     const add = () => {
-        let newType: typesProductState = { id: id, name: typeProduct }
+        let newType: typesProductState = {
+            id: id,
+            name: typeProduct
+        }
         dispatch(addType(newType))
         setId('')
         setTypeProduct('')

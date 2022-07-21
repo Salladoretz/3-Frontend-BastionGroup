@@ -20,6 +20,11 @@
             display: flex;
             justify-content: space-between;
 
+            @media screen and (max-width: 768px) {
+                flex-direction: column;
+                align-items: center;
+            }
+
             .main__topLineLeft {
                 display: flex;
                 align-items: center;
@@ -27,6 +32,10 @@
                 font-size: 30px;
                 line-height: 36px;
                 letter-spacing: 1px;
+
+                @media screen and (max-width: 640px) {
+                    font-size: 22px;
+                }
 
                 button {
                     display: flex;
@@ -38,6 +47,10 @@
                     border: none;
                     background: white;
                     margin: 0px 30px 0px 10px;
+
+                    @media screen and (max-width: 640px) {
+                        margin: 0px 20px 0px 10px;
+                    }
 
                     img {
                         width: 11.67px;
@@ -97,6 +110,10 @@
         max-width: 1110px;
         border: 1px solid #e6e6e6;
 
+        @media screen and (max-width: 640px) {
+            border: none;
+        }
+
         .main__middleHeader {
             display: flex;
             min-height: 69px;
@@ -104,6 +121,7 @@
 
             .main__middleCategoties {
                 display: flex;
+                flex-wrap: wrap;
                 width: 269px;
                 align-items: center;
                 gap: 11px;
@@ -140,9 +158,18 @@
         .main__container {
             display: flex;
 
+            @media screen and (max-width: 640px) {
+                flex-direction: column;
+                align-items: center;
+            }
+
             .sidebar {
                 width: 269px;
                 border-right: 1px solid #e6e6e6;
+
+                @media screen and (max-width: 640px) {
+                    border-right: none;
+                }
 
                 .sidebar__posts {
                     text-align: left;
@@ -152,6 +179,7 @@
                     line-height: 14px;
                     letter-spacing: 0.009em;
                     border-bottom: 1px solid #e6e6e6;
+
 
                     .sidebar__post {
                         margin-bottom: 10px;
@@ -195,17 +223,25 @@
     .pagination {
         display: flex;
         justify-content: flex-end;
-        height: 60px;
+
+        min-height: 60px;
         font-size: 17px;
         line-height: 20px;
+        padding: 0px 20px;
 
 
         .pagination__wrapper {
             display: flex;
             align-items: center;
             justify-content: space-between;
+            flex-wrap: wrap;
             max-width: 840px;
             width: 100%;
+
+            @media screen and (max-width: 640px) {
+                flex-direction: column;
+                align-items: center;
+            }
 
             .pagination__range {
                 display: flex;
@@ -213,6 +249,10 @@
                 gap: 13px;
                 max-width: 293px;
                 width: 100%;
+
+                @media screen and (max-width: 640px) {
+                    justify-content: center;
+                }
 
                 button {
                     display: flex;
@@ -233,6 +273,11 @@
                 justify-content: space-between;
                 max-width: 418px;
                 width: 100%;
+
+                @media screen and (max-width: 640px) {
+                    flex-direction: column;
+                    align-items: center;
+                }
 
                 .pagination__buttons {
 
@@ -261,7 +306,7 @@
 
     .main__underline {
         text-align: left;
-        margin-bottom: 107px;
+        margin: 0px 20px 107px 20px;
         font-weight: 400;
         font-size: 15px;
         line-height: 18px;
@@ -271,7 +316,6 @@
             font-weight: 700;
             font-size: 18px;
             line-height: 22px;
-            letter-spacing: 0.009em;
         }
 
         :nth-last-child(1) {

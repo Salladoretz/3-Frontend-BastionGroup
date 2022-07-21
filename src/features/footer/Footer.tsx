@@ -9,6 +9,16 @@ import VK from '../../assets/icons/VK.svg'
 const Footer = () => {
     return (
         <div className={css.footer}>
+            <div className={css.footer__above}>
+                <div className={css.footer__aboveContainer}>
+                    <input className={css.footer__aboveInput} type="text" placeholder='Ваше имя' />
+                    <input className={css.footer__aboveInput} type="text" placeholder='Ваш телефон' />
+                    <div className={css.footer__aboveButton}>
+                        <button className={css.footer__callbackButton}>Заказать звонок</button>
+                        <p>Нажимая на кнопку вы соглашаетесь с политикой конфиденциальности</p>
+                    </div>
+                </div>
+            </div>
             <div className={css.footer__main}>
                 <div className={css.footer__mainTop}>
                     <img src={Logo_black} alt='' />
@@ -45,16 +55,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className={css.footer__above}>
-                <div className={css.footer__aboveContainer}>
-                    <input className={css.footer__aboveInput} type="text" placeholder='Ваше имя' />
-                    <input className={css.footer__aboveInput} type="text" placeholder='Ваш телефон' />
-                    <div className={css.footer__aboveButton}>
-                        <button className={css.footer__callbackButton}>Заказать звонок</button>
-                        <p>Нажимая на кнопку вы соглашаетесь с политикой конфиденциальности</p>
-                    </div>
-                </div>
-            </div>
+
         </div >
     )
 }

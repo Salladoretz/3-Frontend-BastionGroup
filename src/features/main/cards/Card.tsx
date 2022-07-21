@@ -4,9 +4,10 @@ import CartSVG from '../../../assets/icons/Cart.svg'
 import { productsState } from '../../products/productsSlice'
 import { addProduct } from '../../cart/orderSlice'
 import { useAppDispatch } from '../../../app/hooks'
+import { orderState } from '../../cart/orderSlice'
 
 
-interface CardProduct {
+type CardProduct = {
     product: productsState
 }
 
@@ -18,7 +19,7 @@ const Card: React.FC<CardProduct> = ({ product }) => {
 
     const add = () => {
         if (counter > 0) {
-            let newProduct = {
+            let newProduct: orderState = {
                 productId: product.id,
                 price: product.price,
                 quantity: counter
@@ -45,7 +46,7 @@ const Card: React.FC<CardProduct> = ({ product }) => {
                 </div>
                 <div className={css.card__info}>
                     <div className={css.card__infoStandart}>{product.standart}</div>
-                    <p>{product.name}</p>
+                    <div className={css.card__infoProduct}>{product.name}</div>
                     <div className={css.card__infoOrder}>
                         <div className={css.card__infoPrice}>
                             <p>{product.price} руб.</p>
@@ -54,7 +55,12 @@ const Card: React.FC<CardProduct> = ({ product }) => {
                             <button
                                 onClick={() => setCounter(counter + 1)}
                             >+</button>
-                            <div className={css.card__infoCounter}>{counter}</div>
+                            <div className={css.card__infoCounter}>
+                                <input
+                                    type="number"
+                                    value={counter}
+                                    onChange={event => setCounter(+event.target.value)} />
+                            </div>
                             <button
                                 onClick={() => counter > 0 ? setCounter(counter - 1) : ''}
                             >-</button>
