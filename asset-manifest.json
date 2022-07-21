@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/3-Frontend-BastionGroup/static/css/main.ee32b17c.css",
-    "main.js": "/3-Frontend-BastionGroup/static/js/main.709b7ff3.js",
+    "main.css": "/3-Frontend-BastionGroup/static/css/main.902eae49.css",
+    "main.js": "/3-Frontend-BastionGroup/static/js/main.48821ade.js",
     "static/media/Product.png": "/3-Frontend-BastionGroup/static/media/Product.4df7b47d61dbc66f64e9.png",
     "static/media/Phone_white.svg": "/3-Frontend-BastionGroup/static/media/Phone_white.5c91aa0d3541eba3c28b985996b3f968.svg",
     "static/media/VK.svg": "/3-Frontend-BastionGroup/static/media/VK.2d092f7903834b4f857145e78dce5dbb.svg",
@@ -33,11 +33,11 @@
     "index.html": "/3-Frontend-BastionGroup/index.html",
     "static/media/ShevronDown.svg": "/3-Frontend-BastionGroup/static/media/ShevronDown.9800a6ede52fd5fc66761e14ac15ad11.svg",
     "static/media/ShevronUp.svg": "/3-Frontend-BastionGroup/static/media/ShevronUp.cd90d096bf8b12500b6daaf0b8a4b5ee.svg",
-    "main.ee32b17c.css.map": "/3-Frontend-BastionGroup/static/css/main.ee32b17c.css.map",
-    "main.709b7ff3.js.map": "/3-Frontend-BastionGroup/static/js/main.709b7ff3.js.map"
+    "main.902eae49.css.map": "/3-Frontend-BastionGroup/static/css/main.902eae49.css.map",
+    "main.48821ade.js.map": "/3-Frontend-BastionGroup/static/js/main.48821ade.js.map"
   },
   "entrypoints": [
-    "static/css/main.ee32b17c.css",
-    "static/js/main.709b7ff3.js"
+    "static/css/main.902eae49.css",
+    "static/js/main.48821ade.js"
   ]
 }
