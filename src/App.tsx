@@ -14,6 +14,7 @@ function App() {
       <Header />
       <Routes>
         <Route path='main' element={<Main />} />
+        <Route path='3-Frontend-BastionGroup' element={<Main />} />
         <Route path='types' element={<TypesProduct />} />
         <Route path='products' element={<Products />} />
         <Route path='cart' element={<Cart />} />
