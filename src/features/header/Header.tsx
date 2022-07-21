@@ -55,10 +55,12 @@ const Header = () => {
                     <div className={css.header__brand}>
                         <p>Производитель металлических изделий №1</p>
                     </div>
-                    <button className={css.header__catalog}>
-                        <img src={Apps} alt='' />
-                        <p>Каталог</p>
-                    </button>
+                    <Link to='main'>
+                        <button className={css.header__catalog}>
+                            <img src={Apps} alt='' />
+                            <p>Каталог</p>
+                        </button>
+                    </Link>
                     <div className={css.header__search}>
                         <img src={Search} alt='' />
                         <input type="text" placeholder='Поиск по названию...' />
@@ -75,8 +77,8 @@ const Header = () => {
                             <div className={css.header__cartLink}>
                                 <img src={CartSVG} alt='' className={css.header__cartIcon} />
                             </div>
+                            Корзина
                         </Link>
-                        Корзина
                         <div
                             className={order.length > 0
                                 ? css.header__cartCounter
