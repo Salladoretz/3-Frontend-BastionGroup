@@ -4,7 +4,7 @@ import Options from '../../../assets/icons/Options.svg'
 import Help from '../../../assets/icons/Help.svg'
 import ShevronDown from '../../../assets/icons/ShevronDown.svg'
 import { useAppDispatch, useAppSelector } from '../../../app/hooks'
-import { setFilterMinPrice, setFilterMaxPrice, setFilterType } from './filtersSlice'
+import { setFilterMinPrice, setFilterMaxPrice, setFilterType, clearFilters } from './filtersSlice'
 
 
 const Filters = () => {
@@ -48,6 +48,11 @@ const Filters = () => {
         #c93e33 ${maxRange / maxPrice * 100}%,
         #ffffff ${maxRange / maxPrice * 100}%)`;
 
+    const clear = () => {
+        dispatch(clearFilters())
+        setMinRange(minPrice)
+        setMaxRange(maxPrice)
+    }
 
     return (
         <div className={css.filters}>
@@ -123,6 +128,18 @@ const Filters = () => {
                         >{item.name}</button>)}
                 </div>
             </div>
+            <div className={css.filters__customersChoice}>
+                <div></div>
+                <p>Выбор покупателей</p>
+            </div>
+            <div className={css.filters__bestPrice}>
+                <div></div>
+                <p>Лучшая цена</p>
+            </div>
+            <button
+                className={css.filters__clear}
+                onClick={() => clear()}
+            >Сбросить фильтры</button>
         </div >
     )
 }

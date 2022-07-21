@@ -33,10 +33,16 @@ export const filtersSlice = createSlice({
         setFilterStandart: (state, action) => {
             let index = state.filterStandart.findIndex(el => el === action.payload)
             index < 0 ? state.filterStandart.push(action.payload) : state.filterStandart.splice(index, 1)
+        },
+        clearFilters: (state) => {
+            state.filterType = ''
+            state.filterMinPrice = 0
+            state.filterMaxPrice = Infinity
+            state.filterStandart = []
         }
     }
 })
 
-export const { setFilterMinPrice, setFilterMaxPrice, setFilterType, setFilterStandart } = filtersSlice.actions
+export const { setFilterMinPrice, setFilterMaxPrice, setFilterType, setFilterStandart, clearFilters } = filtersSlice.actions
 
 export default filtersSlice.reducer
