@@ -21,10 +21,10 @@ const Header = () => {
         <div className={css.header}>
             <div className={css.header__top}>
                 <div className={css.header__menu}>
-                    <Link to='types'>
+                    <Link to='3-Frontend-BastionGroup/types'>
                         <p>Типы продуктов</p>
                     </Link>
-                    <Link to='products'>
+                    <Link to='3-Frontend-BastionGroup/products'>
                         <p>Продукты</p>
                     </Link>
                     <p>Выгоды для вас</p>
@@ -49,13 +49,13 @@ const Header = () => {
             </div>
             <div className={css.header__bottom}>
                 <div className={css.header__bottomContainer}>
-                    <Link to='main'>
+                    <Link to='3-Frontend-BastionGroup'>
                         <img className={css.header__logo} src={Logo} alt='' />
                     </Link>
                     <div className={css.header__brand}>
                         <p>Производитель металлических изделий №1</p>
                     </div>
-                    <Link to='main'>
+                    <Link to='3-Frontend-BastionGroup'>
                         <button className={css.header__catalog}>
                             <img src={Apps} alt='' />
                             <p>Каталог</p>
@@ -73,7 +73,7 @@ const Header = () => {
                         Избранное
                     </div>
                     <div className={css.header__cart}>
-                        <Link to='cart'>
+                        <Link to='3-Frontend-BastionGroup/cart'>
                             <div className={css.header__cartLink}>
                                 <img src={CartSVG} alt='' className={css.header__cartIcon} />
                             </div>

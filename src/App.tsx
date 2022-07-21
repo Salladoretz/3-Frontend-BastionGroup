@@ -13,11 +13,10 @@ function App() {
     <div className="App">
       <Header />
       <Routes>
-        <Route path='main' element={<Main />} />
         <Route path='3-Frontend-BastionGroup' element={<Main />} />
-        <Route path='types' element={<TypesProduct />} />
-        <Route path='products' element={<Products />} />
-        <Route path='cart' element={<Cart />} />
+        <Route path='3-Frontend-BastionGroup/types' element={<TypesProduct />} />
+        <Route path='3-Frontend-BastionGroup/products' element={<Products />} />
+        <Route path='3-Frontend-BastionGroup/cart' element={<Cart />} />
       </Routes>
       <Footer />
     </div>
